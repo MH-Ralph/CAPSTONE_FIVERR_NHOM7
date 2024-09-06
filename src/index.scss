@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Helvetica Neue, sans-serif;
+}
+
+@layer components {
+  .max-container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+@layer utilities {
+  .padding-y {
+    @apply py-8 sm:py-10;
+  }
+}
