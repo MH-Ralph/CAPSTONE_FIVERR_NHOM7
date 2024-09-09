@@ -35,7 +35,7 @@ const DropDownHeader = ({ name, content }) => {
         items,
       }}
       trigger={["click"]}
-      className="hidden md:block cursor-pointer px-2  hover:bg-gray-100  duration-300 rounded-md whitespace-nowrap"
+      className="hidden lg:block cursor-pointer px-2  hover:bg-gray-100  duration-300 rounded-md whitespace-nowrap"
     >
       <a onClick={(e) => e.preventDefault()}>
         <Space className="py-2 font-bold text-text-dark ">

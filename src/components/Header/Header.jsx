@@ -6,6 +6,7 @@ import IconNav1 from "../Icons/IconNav1";
 import { navLinksTitle, navLinksParagh } from "../../common/constant";
 import { MenuOutlined } from "@ant-design/icons";
 import FormSearchProduct from "../FormSearchProduct/FormSearchProduct";
+import { pathDefault } from "../../common/pathDefault";
 
 const Header = () => {
   const [searchOpacity, setSearchOpacity] = useState(0);
@@ -34,7 +35,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed z-50 py-5 left-0 right-0 border-b">
+    <header className="fixed z-50 py-5 left-0 right-0 border-b bg-white shadow-sm">
       <div className="max-container px-8 flex items-center gap-5">
         {/* Left Header */}
         <div className="flex items-center w-1/2 space-x-4">
@@ -52,7 +53,7 @@ const Header = () => {
           </div>
 
           {/* Search */}
-          <FormSearchProduct />
+          <FormSearchProduct size={20} />
           {/* <div
             className="header_search flex items-center border border-gray-500 rounded-md flex-1"
             style={{ opacity: searchOpacity, visibility: "visible" }}
@@ -110,14 +111,14 @@ const Header = () => {
           </Link>
 
           <Link
-            to={"/"}
+            to={pathDefault.register}
             className={`py-2 px-5 hover:text-primary duration-300 font-bold whitespace-nowrap`}
           >
             Sign in
           </Link>
 
           <Link
-            to={"/"}
+            to={pathDefault.login}
             className={`py-2 px-5 rounded-md border border-primary text-green-600 hover:bg-primary hover:text-white duration-300 font-bold`}
           >
             Join
@@ -132,7 +133,10 @@ const Header = () => {
         } transition-transform duration-300 lg:hidden`}
       >
         <div className="px-4 py-7">
-          <Link className="py-3 px-5 text-white font-bold bg-black rounded-md hover:opacity-80">
+          <Link
+            to={pathDefault.login}
+            className="py-3 px-5 text-white font-bold bg-black rounded-md hover:opacity-80"
+          >
             Join Fiverr
           </Link>
           <div className="mt-8 pl-2">
@@ -148,7 +152,10 @@ const Header = () => {
             <Link to="/" className="block p-2 hover:bg-gray-100">
               Become a Seller
             </Link>
-            <Link to="/" className="block p-2 hover:bg-gray-100">
+            <Link
+              to={pathDefault.register}
+              className="block p-2 hover:bg-gray-100"
+            >
               Sign in
             </Link>
           </div>
