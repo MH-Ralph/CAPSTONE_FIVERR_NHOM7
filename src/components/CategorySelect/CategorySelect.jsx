@@ -41,19 +41,21 @@ const CategorySelect = () => {
     },
   ];
   return (
-    <div className="category_select">
-      {categoryArr.map((item, index) => {
-        return (
-          <div className="category_box" key={index}>
-            <a href="" className="category_box_content">
-              <div className="image">
-                <img src={item.src} alt="" />
-              </div>
-              <p className="box_content">{item.content}</p>
-            </a>
-          </div>
-        );
-      })}
+    <div className="">
+      <div className="category_select">
+        {categoryArr.map((item, index) => {
+          return (
+            <div className="category_box" key={index}>
+              <a href="" className="category_box_content">
+                <div className="image">
+                  <img src={item.src} alt="" />
+                </div>
+                <p className="box_content">{item.content}</p>
+              </a>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

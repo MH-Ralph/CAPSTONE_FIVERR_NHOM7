@@ -10,14 +10,14 @@ const PopularService = () => {
     dots: false,
     infinite: false,
     speed: 500,
-    slidesToShow: 5.5,
+    slidesToShow: 6,
     slidesToScroll: 4,
     initialSlide: 2,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1124,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 4,
           slidesToScroll: 3,
           infinite: true,
           dots: true,
@@ -26,7 +26,7 @@ const PopularService = () => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 2,
           initialSlide: 2,
         },

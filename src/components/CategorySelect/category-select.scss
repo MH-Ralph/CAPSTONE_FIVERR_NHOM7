@@ -1,8 +1,10 @@
 .category_select {
+  margin-top: 40px;
   display: grid;
-  grid-template-columns: auto;
-  grid-auto-flow: column;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  grid-auto-flow: row;
   color: #222325;
+
   .category_box {
     padding: 6px;
     margin: 0 auto;
