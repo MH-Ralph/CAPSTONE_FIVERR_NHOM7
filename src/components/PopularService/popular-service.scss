@@ -1,0 +1,92 @@
+.popular_service {
+  h2 {
+    font-size: 48px;
+    letter-spacing: 1.5px;
+    line-height: 105%;
+    max-width: 720px;
+    color: #404145;
+  }
+  .service_list {
+    transform: translate3d(0px, 0px, 0px);
+    // display: grid;
+    position: relative;
+    .slick-list {
+      overflow-x: hidden;
+    }
+    // display: flex;
+    button.slick-arrow {
+      color: black;
+      align-items: center;
+      background-color: white;
+      border: 0;
+      border-radius: 50%;
+      bottom: 0;
+      overflow-x: visible;
+      // display: none;
+      height: 48px;
+      justify-content: center;
+      margin: auto;
+      // position: absolute;
+      text-align: center;
+      top: 0;
+      width: 48px;
+      z-index: 1000;
+      transition: all 0.5s;
+      box-shadow: 0 1.2px 1.92251px rgba(0, 0, 0, 0.02),
+        0 2px 3.68135px rgba(0, 0, 0, 0.04), 0 1px 5px rgba(0, 0, 0, 0.05);
+    }
+    .slick-arrow.slick-disabled {
+      visibility: hidden;
+    }
+
+    .slick-prev::before {
+      color: rgba(0, 0, 0, 0.5);
+      content: "\f104"; /* Correct Unicode for 'fa-angle-left' */
+      font-family: "Font Awesome 5 Free"; /* Font Awesome family */
+      font-weight: 900; /* Solid style for the icon */
+    }
+    .slick-next::before {
+      color: rgba(0, 0, 0, 0.5);
+      content: "\f105"; /* Correct Unicode for 'fa-angle-left' */
+      font-family: "Font Awesome 5 Free"; /* Font Awesome family */
+      font-weight: 900; /* Solid style for the icon */
+    }
+
+    .service_item {
+      min-width: fit-content;
+      width: 208px;
+      height: 290px;
+
+      .service_box {
+        border-radius: 16px;
+        margin: 12px 4px;
+        min-height: 235px;
+        padding: 25px 6px 6px;
+        // width: 188px;
+        width: 200px;
+        height: 266px;
+        a.service_box_content {
+          display: flex;
+          height: 100%;
+          justify-content: space-between;
+          flex-direction: column;
+          p.service_box_title {
+            font-size: 18px;
+            line-height: 28px;
+            color: #fff;
+            font-weight: 700;
+            padding: 0 10px;
+            // margin: 18px 0;
+            position: relative;
+            z-index: 1;
+          }
+          .service_box_image {
+            img {
+              border-radius: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

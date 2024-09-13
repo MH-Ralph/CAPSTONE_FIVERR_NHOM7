@@ -1,0 +1,64 @@
+.fiverrPro {
+  background-color: #013912;
+  color: white;
+  border-radius: 12px;
+  font-weight: 200;
+
+  .fiverrPro_content {
+    display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    padding: 80px 64px;
+    margin: 40px 0;
+    .fiverrPro_content_detail {
+      grid-column: 1/2;
+      .fiverrPro_logo {
+        margin-bottom: 32px;
+        svg {
+        }
+      }
+      h2 {
+        font-size: 46px;
+        //   letter-spacing: -0.03em;
+        line-height: 60px;
+        padding-bottom: 20px;
+        font-weight: 400;
+      }
+      p {
+        padding-bottom: 16px;
+      }
+      ul {
+        list-style-type: disc;
+        padding-left: 24px;
+        margin-bottom: 36px;
+        li {
+        }
+      }
+      button {
+        background-color: #fc832b;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 100%;
+        padding: 12px 24px;
+        text-align: center;
+        transition: 70ms cubic-bezier(0.75, 0, 0.25, 1);
+        &:hover {
+          background-color: #e37627;
+        }
+      }
+    }
+    .fierrPro_content_image {
+      grid-column: 3/6;
+      display: flex;
+      align-items: center;
+      img {
+        max-height: 420px;
+        object-fit: contain;
+        width: 100%;
+        overflow-clip-margin: content-box;
+        overflow: clip;
+      }
+    }
+  }
+}
