@@ -24,4 +24,12 @@ body {
   .padding-y {
     @apply py-8 sm:py-10;
   }
+  body {
+    background-color: #fff;
+    color: #62646a;
+    // font: 400 16px / 24px Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
+    position: relative;
+    width: 100%;
+    // background-color: darkgray;
+  }
 }

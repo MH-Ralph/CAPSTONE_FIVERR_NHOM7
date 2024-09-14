@@ -8,7 +8,15 @@ import { MenuOutlined } from "@ant-design/icons";
 import FormSearchProduct from "../FormSearchProduct/FormSearchProduct";
 import { pathDefault } from "../../common/pathDefault";
 
+import Login from "../../components/Login/Login";
+
 const Header = () => {
+  // Thêm Sign In component vào nut SignIn
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   const [searchOpacity, setSearchOpacity] = useState(0);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -35,7 +43,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed z-50 py-5 left-0 right-0 border-b bg-white shadow-sm">
+    <header className=" fixed z-50 py-5 top-0 left-0 right-0 border-b bg-white shadow-sm">
       <div className="max-container px-8 flex items-center gap-5">
         {/* Left Header */}
         <div className="flex items-center w-1/2 space-x-4">
@@ -111,11 +119,13 @@ const Header = () => {
           </Link>
 
           <Link
-            to={pathDefault.register}
+            // to={pathDefault.register}
+            onClick={openModal}
             className={`py-2 px-5 hover:text-primary duration-300 font-bold whitespace-nowrap`}
           >
             Sign in
           </Link>
+          {isModalOpen && <Login visible={isModalOpen} onClose={closeModal} />}
 
           <Link
             to={pathDefault.login}
@@ -153,7 +163,8 @@ const Header = () => {
               Become a Seller
             </Link>
             <Link
-              to={pathDefault.register}
+              // to={pathDefault.register}
+              onClick={openModal}
               className="block p-2 hover:bg-gray-100"
             >
               Sign in
