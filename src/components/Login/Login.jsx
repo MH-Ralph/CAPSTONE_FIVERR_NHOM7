@@ -1,9 +1,22 @@
 import React, { useState } from "react";
 import "./login.scss";
-
 import { Button, Modal } from "antd";
+import { useFormik } from "formik";
+import * as yup from "yup";
+import { http } from "../../services/config";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
+  // TOASTIFY
+  const notify = (input) => {
+    {
+      input === "success"
+        ? toast.success("Bạn đã đăng nhập thành công!!")
+        : toast.error("Có lỗi xảy ra, vui lòng thử lại!!");
+    }
+  };
+  // ANT BASIC MODAL
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => {
     setIsModalOpen(true);
@@ -15,8 +28,41 @@ const Login = () => {
     setIsModalOpen(false);
   };
 
+  // SET UP FORMIK
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+      password: "",
+    },
+    onSubmit: (values) => {
+      console.log(values);
+      http
+        .post("/auth/signin", values)
+        .then((res) => {
+          console.log(res);
+          notify("success");
+          formik.resetForm();
+        })
+        .catch((err) => {
+          console.log(err);
+          notify("error");
+        });
+    },
+    validationSchema: yup.object({
+      email: yup
+        .string()
+        .email("Invalid email address")
+        .required("Email is required"),
+      password: yup
+        .string()
+        .min(6, "Password must be at least 6 characters")
+        .required("Password is required"),
+    }),
+  });
+
   return (
     <>
+      <ToastContainer />
       <Button type="primary" onClick={showModal}>
         Sign In
       </Button>
@@ -41,27 +87,47 @@ const Login = () => {
             <div className="login_right_title">
               <h2>Sign in to your account</h2>
               <p>
-                Don’t have an account? <u>Join here</u>
+                Don’t have an account?{" "}
+                <a>
+                  <u>Join here</u>
+                </a>
               </p>
             </div>
             <div className="login_form">
-              <form>
-                <h2>Input Your Account Here</h2>
+              <form onSubmit={formik.handleSubmit}>
                 <div className="login_form_input">
                   <input
-                    placeholder="Enter your account"
+                    placeholder="Enter your email"
                     type="text"
-                    name=""
+                    name="email"
                     id="formAccount"
+                    onChange={formik.handleChange}
+                    value={formik.values.email}
+                    onBlur={formik.handleBlur}
                   />
+                  {formik.errors.email && formik.touched.email ? (
+                    <div style={{ color: "red", textAlign: "left" }}>
+                      {formik.errors.email}
+                    </div>
+                  ) : null}
                   <input
                     placeholder="Enter your password"
                     type="password"
-                    name=""
+                    name="password"
                     id="formPassword"
+                    onChange={formik.handleChange}
+                    value={formik.values.password}
+                    onBlur={formik.handleBlur}
                   />
+                  {formik.errors.password && formik.touched.password ? (
+                    <div style={{ color: "red", textAlign: "left" }}>
+                      {formik.errors.password}
+                    </div>
+                  ) : null}
                 </div>
-                <button type="submit">Sign In</button>
+                <div className="login_button">
+                  <button type="submit">Sign In</button>
+                </div>
               </form>
             </div>
             <div className="strong">
@@ -146,9 +212,15 @@ const Login = () => {
             </div>
             <div className="login_terms">
               <p>
-                By joining, you agree to the Fiverr <u>Terms of Service</u> and
-                to occasionally receive emails from us. Please read our{" "}
-                <u>Privacy Policy</u> to learn how we use your personal data.
+                By joining, you agree to the Fiverr{" "}
+                <a>
+                  <u>Terms of Service</u>
+                </a>{" "}
+                and to occasionally receive emails from us. Please read our{" "}
+                <a>
+                  <u>Privacy Policy</u>
+                </a>{" "}
+                to learn how we use your personal data.
               </p>
             </div>
           </div>
