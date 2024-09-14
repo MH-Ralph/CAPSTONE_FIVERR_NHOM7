@@ -8,10 +8,15 @@ import Testimonial from "../../components/Testimonial/Testimonial";
 import LogoMaker from "../../components/LogoMaker/LogoMaker";
 import Guide from "../../components/Guide/Guide";
 import Made from "../../components/Made/Made";
+import Login from "../../components/Login/Login";
 
 const HomePage = () => {
   return (
     <div className="container mx-auto">
+      <div className="text-right">
+        <Login />
+      </div>
+
       <Banner />
       <CategorySelect />
       <PopularService />
