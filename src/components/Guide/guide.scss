@@ -127,3 +127,33 @@
     }
   }
 }
+
+@media (max-width: 1160px) {
+  .guide {
+    .guide_list {
+      .slick-slider {
+        min-width: 100%;
+      }
+      // column-gap: 10px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .joinBanner {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .guide {
+    .guide_top {
+      .guide_title {
+        font-size: 40px;
+      }
+    }
+  }
+  .joinBanner {
+    font-size: 2rem;
+  }
+}

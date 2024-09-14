@@ -126,3 +126,27 @@
     }
   }
 }
+
+@media (max-width: 1160px) {
+  .made {
+    .made_list {
+      column-count: 3;
+      // column-gap: 10px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .made {
+    .made_list {
+      column-count: 2;
+    }
+  }
+}
+
+// @media (max-width: 600px) {
+//   .made {
+//     .made_list {
+//     }
+//   }
+// }

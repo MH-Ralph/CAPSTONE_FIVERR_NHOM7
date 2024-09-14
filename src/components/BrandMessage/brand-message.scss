@@ -82,6 +82,9 @@
   .brand_message {
     .message_list {
       grid-template-columns: repeat(1, 1fr);
+      .message_item {
+        justify-content: center;
+      }
     }
     .brand_video {
       height: 400px;
