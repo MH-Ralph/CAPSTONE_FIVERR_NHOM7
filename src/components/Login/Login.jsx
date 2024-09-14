@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./login.scss";
 import { Button, Modal } from "antd";
 import { useFormik } from "formik";
@@ -8,6 +8,27 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
+  // Check windown resize for responsive
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 900) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+    };
+
+    // Kiểm tra khi mount component
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    // remove event when unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   // TOASTIFY
   const notify = (input) => {
     {
@@ -75,14 +96,16 @@ const Login = () => {
         // bodyStyle={{ height: "645px" }}
       >
         <div className="login_modal">
-          <div className="login_left">
-            <h2 className="login_left_title">Success starts here</h2>
-            <ul>
-              <li>Over 700 categories</li>
-              <li>Quality work done faster</li>
-              <li>Access to talent and businesses across the globe</li>
-            </ul>
-          </div>
+          {isVisible && (
+            <div className="login_left">
+              <h2 className="login_left_title">Success starts here</h2>
+              <ul>
+                <li>Over 700 categories</li>
+                <li>Quality work done faster</li>
+                <li>Access to talent and businesses across the globe</li>
+              </ul>
+            </div>
+          )}
           <div className="login_right">
             <div className="login_right_title">
               <h2>Sign in to your account</h2>
