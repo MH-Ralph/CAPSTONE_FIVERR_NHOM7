@@ -7,8 +7,9 @@ import {
   VideoCameraOutlined,
 } from "@ant-design/icons";
 import { Button, Layout, Menu, theme } from "antd";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import { pathDefault } from "../../common/pathDefault";
+import { getLocalStorage } from "../../utils/utils";
 const { Header, Sider, Content } = Layout;
 
 const AdminTemplate = () => {
@@ -16,6 +17,16 @@ const AdminTemplate = () => {
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    let dataLocal = getLocalStorage("user");
+
+    if (dataLocal?.user.role != "ADMIN" || !dataLocal) {
+      navigate(pathDefault.adminLogin);
+    }
+  }, []);
 
   return (
     <Layout className="min-h-screen">
