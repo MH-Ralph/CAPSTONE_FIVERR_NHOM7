@@ -8,6 +8,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Login = (props) => {
+  console.log("Hello: ", props.visible);
   // Check windown resize for responsive
   const [isVisible, setIsVisible] = useState(true);
 

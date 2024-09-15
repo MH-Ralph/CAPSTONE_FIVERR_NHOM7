@@ -4,6 +4,10 @@ import { pathDefault } from "../common/pathDefault";
 import HomeTemplate from "../templates/HomeTemplate";
 import HomePage from "../pages/HomePage/HomePage";
 import ListJobPage from "../pages/ListJobPage/ListJobPage";
+import AdminTemplate from "../templates/AdminTemplate/AdminTemplate";
+import ManagerUser from "../pages/ManagerUser/ManagerUser";
+import AdminLogin from "../pages/AdminLogin/AdminLogin";
+import ManagerJob from "../pages/ManagerJob/ManagerJob";
 
 const useRoutesCustom = () => {
   const routes = useRoutes([
@@ -15,6 +19,15 @@ const useRoutesCustom = () => {
         { path: pathDefault.listJob, element: <ListJobPage /> },
       ],
     },
+    {
+      path: pathDefault.admin,
+      element: <AdminTemplate />,
+      children: [
+        { index: true, element: <ManagerUser /> },
+        { path: pathDefault.managerJob, element: <ManagerJob /> },
+      ],
+    },
+    { path: pathDefault.adminLogin, element: <AdminLogin /> },
   ]);
   return routes;
 };
