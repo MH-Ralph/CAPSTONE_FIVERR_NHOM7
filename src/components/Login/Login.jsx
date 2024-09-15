@@ -83,7 +83,6 @@ const Login = (props) => {
 
   return (
     <>
-      <ToastContainer />
       {/* <Button type="primary" onClick={showModal}>
         Sign In
       </Button> */}
@@ -96,6 +95,8 @@ const Login = (props) => {
         width={880}
         // bodyStyle={{ height: "645px" }}
       >
+        <ToastContainer />
+
         <div className="login_modal">
           {isVisible && (
             <div className="login_left">

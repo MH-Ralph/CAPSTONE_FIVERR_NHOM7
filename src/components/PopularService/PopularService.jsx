@@ -20,7 +20,7 @@ const PopularService = () => {
           slidesToShow: 4,
           slidesToScroll: 3,
           infinite: true,
-          dots: true,
+          dots: false,
         },
       },
       {
