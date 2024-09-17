@@ -40,7 +40,7 @@ const AdminTemplate = () => {
             {
               key: "1",
               icon: <UserOutlined />,
-              label: <Link>Người dùng</Link>,
+              label: <Link to={pathDefault.admin}>Người dùng</Link>,
             },
             {
               key: "2",
@@ -50,7 +50,9 @@ const AdminTemplate = () => {
             {
               key: "3",
               icon: <UploadOutlined />,
-              label: <Link>Thuê công việc</Link>,
+              label: (
+                <Link to={pathDefault.createUser}>Tạo Người Dùng Mới</Link>
+              ),
             },
           ]}
         />
