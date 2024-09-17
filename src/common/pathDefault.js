@@ -5,6 +5,6 @@ export const pathDefault = {
   listJob: "/list-job",
   admin: "/admin",
   adminLogin: "/admin-login",
-  createUser: "/create-user",
+  createUser: "create-user",
   managerJob: "admin-job",
 };

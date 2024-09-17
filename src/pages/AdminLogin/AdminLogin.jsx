@@ -61,19 +61,19 @@ const AdminLogin = () => {
             console.log(err);
           });
       },
-      validationSchema: yup.object({
-        email: yup
-          .string()
-          .required("Vui long khong bo trong truong nay ")
-          .email("Truong nay phai la email"),
-        password: yup
-          .string()
-          .required("Vui long khong bo trong truong nay ")
-          .matches(
-            /^(?=.*[A-Z])(?=.*\d).+$/,
-            "Vui lòng nhập ít nhất 1 chữ cái viết hoa và số"
-          ),
-      }),
+      // validationSchema: yup.object({
+      //   email: yup
+      //     .string()
+      //     .required("Vui long khong bo trong truong nay ")
+      //     .email("Truong nay phai la email"),
+      //   password: yup
+      //     .string()
+      //     .required("Vui long khong bo trong truong nay ")
+      //     .matches(
+      //       /^(?=.*[A-Z])(?=.*\d).+$/,
+      //       "Vui lòng nhập ít nhất 1 chữ cái viết hoa và số"
+      //     ),
+      // }),
     });
 
   return (
