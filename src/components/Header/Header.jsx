@@ -128,7 +128,7 @@ const Header = () => {
           {isModalOpen && <Login visible={isModalOpen} onClose={closeModal} />}
 
           <Link
-            to={pathDefault.login}
+            to={pathDefault.register}
             className={`py-2 px-5 rounded-md border border-primary text-green-600 hover:bg-primary hover:text-white duration-300 font-bold`}
           >
             Join
@@ -144,7 +144,7 @@ const Header = () => {
       >
         <div className="px-4 py-7">
           <Link
-            to={pathDefault.login}
+            to={pathDefault.register}
             className="py-3 px-5 text-white font-bold bg-black rounded-md hover:opacity-80"
           >
             Join Fiverr

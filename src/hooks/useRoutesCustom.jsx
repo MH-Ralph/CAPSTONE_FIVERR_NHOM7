@@ -10,6 +10,7 @@ import AdminLogin from "../pages/AdminLogin/AdminLogin";
 import ManagerJob from "../pages/ManagerJob/ManagerJob";
 import CreateUser from "../pages/CreateUser/CreateUser";
 import DetailJob from "../pages/DetailJob/DetailJob";
+import RegisterPage from "../pages/Register/RegisterPage";
 
 const useRoutesCustom = () => {
   const routes = useRoutes([
@@ -22,6 +23,7 @@ const useRoutesCustom = () => {
         { path: pathDefault.detailJob, element: <DetailJob /> },
       ],
     },
+    { path: pathDefault.register, element: <RegisterPage /> },
     {
       path: pathDefault.admin,
       element: <AdminTemplate />,
