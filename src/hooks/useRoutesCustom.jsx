@@ -9,6 +9,7 @@ import ManagerUser from "../pages/ManagerUser/ManagerUser";
 import AdminLogin from "../pages/AdminLogin/AdminLogin";
 import ManagerJob from "../pages/ManagerJob/ManagerJob";
 import CreateUser from "../pages/CreateUser/CreateUser";
+import DetailJob from "../pages/DetailJob/DetailJob";
 
 const useRoutesCustom = () => {
   const routes = useRoutes([
@@ -18,6 +19,7 @@ const useRoutesCustom = () => {
       children: [
         { index: true, element: <HomePage /> },
         { path: pathDefault.listJob, element: <ListJobPage /> },
+        { path: pathDefault.detailJob, element: <DetailJob /> },
       ],
     },
     {

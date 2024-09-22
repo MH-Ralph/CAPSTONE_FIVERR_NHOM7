@@ -34,16 +34,19 @@ const FormSearchProduct = () => {
           return {
             key: index,
             label: (
-              <Link
-                to={`/cong-viec-chi-tiet/${job.id}`}
+              <button
                 className="flex items-center space-x-4"
+                onClick={() => {
+                  navigate(`${pathDefault.detailJob}?id=${job.id}`);
+                  setCheckDropDown(false);
+                }}
               >
                 <img src={job.congViec.hinhAnh} className="h-14" alt="img" />
                 <div>
                   <h4>{job.congViec.tenCongViec}</h4>
                   <p>{job.congViec.giaTien}</p>
                 </div>
-              </Link>
+              </button>
             ),
           };
         });

@@ -10,6 +10,8 @@ import { Button, Layout, Menu, theme } from "antd";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { pathDefault } from "../../common/pathDefault";
 import { getLocalStorage } from "../../utils/utils";
+import { useDispatch } from "react-redux";
+import { getValueUserApi } from "../../redux/personSlice";
 const { Header, Sider, Content } = Layout;
 
 const AdminTemplate = () => {

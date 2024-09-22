@@ -3,6 +3,7 @@ export const pathDefault = {
   register: "/dang-ki",
   login: "/dang-nhap",
   listJob: "/list-job",
+  detailJob: "/detail-job",
   admin: "/admin",
   adminLogin: "/admin-login",
   createUser: "create-user",
