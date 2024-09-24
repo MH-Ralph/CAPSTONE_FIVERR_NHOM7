@@ -40,7 +40,7 @@ const LogoMaker = () => {
         </div>
       </div>
       <div className="logoMaker_image">
-        <img src="../../../public/image/logo-maker-lohp.png" alt="" />
+        <img src="./image/logo-maker-lohp.png" alt="" />
       </div>
     </div>
   );

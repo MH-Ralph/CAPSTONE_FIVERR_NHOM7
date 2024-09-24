@@ -4,82 +4,82 @@ import "./made.scss";
 const Made = () => {
   const madeArr = [
     {
-      imageUrl: "../../../public/image/1-min.jpeg",
+      imageUrl: "./image/1-min.jpeg",
       featured: "Logo Design",
       author: "marcel_dezinero",
     },
     {
-      imageUrl: "../../../public/image/1.jpg",
+      imageUrl: "./image/1.jpg",
       featured: "Architecture & Interior Design",
       author: "marcel_dezinero",
     },
     {
-      imageUrl: "../../../public/image/03.jpg",
+      imageUrl: "./image/03.jpg",
       featured: "Logo Design",
       author: "marcel_dezinero",
     },
     {
-      imageUrl: "../../../public/image/4.jpg",
+      imageUrl: "./image/4.jpg",
       featured: "Architecture & Interior Design",
       author: "marcel_dezinero",
     },
     {
-      imageUrl: "../../../public/image/artwork.jpeg",
+      imageUrl: "./image/artwork.jpeg",
       featured: "Illustration",
       author: "marcel_dezinero",
     },
     {
-      imageUrl: "../../../public/image/Aurelle-02.png",
+      imageUrl: "./image/Aurelle-02.png",
       featured: "Architecture & Interior Design",
       author: "marcel_dezinero",
     },
     {
-      imageUrl: "../../../public/image/F.jpg",
+      imageUrl: "./image/F.jpg",
       featured: "Logo Design",
       author: "marcel_dezinero",
     },
     {
-      imageUrl: "../../../public/image/hammer-final-4.jpg",
+      imageUrl: "./image/hammer-final-4.jpg",
       featured: "Architecture & Interior Design",
       author: "marcel_dezinero",
     },
     {
-      imageUrl: "../../../public/image/Post-1.png",
+      imageUrl: "./image/Post-1.png",
       featured: "Architecture & Interior Design",
       author: "marcel_dezinero",
     },
     {
-      imageUrl: "../../../public/image/R1-oak.jpg",
+      imageUrl: "./image/R1-oak.jpg",
       featured: "Illustration",
       author: "marcel_dezinero",
     },
     {
-      imageUrl: "../../../public/image/S-2.jpg",
+      imageUrl: "./image/S-2.jpg",
       featured: "Logo Design",
       author: "marcel_dezinero",
     },
     {
-      imageUrl: "../../../public/image/VIEW-01.jpeg",
+      imageUrl: "./image/VIEW-01.jpeg",
       featured: "Architecture & Interior Design",
       author: "marcel_dezinero",
     },
     {
-      imageUrl: "../../../public/image/VIEW-01.jpg",
+      imageUrl: "./image/VIEW-01.jpg",
       featured: "Illustration",
       author: "marcel_dezinero",
     },
     {
-      imageUrl: "../../../public/image/View-03.jpg",
+      imageUrl: "./image/View-03.jpg",
       featured: "Logo Design",
       author: "marcel_dezinero",
     },
     {
-      imageUrl: "../../../public/image/View-5.jpg",
+      imageUrl: "./image/View-5.jpg",
       featured: "Architecture & Interior Design",
       author: "marcel_dezinero",
     },
     {
-      imageUrl: "../../../public/image/view-3.jpeg",
+      imageUrl: "./image/view-3.jpeg",
       featured: "Illustration",
       author: "marcel_dezinero",
     },

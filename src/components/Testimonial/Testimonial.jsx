@@ -45,7 +45,7 @@ const Testimonial = () => {
     {
       videoUrl: "https://www.youtube.com/embed/hICsccX-6TY?si=icDusUhWAz-QG6w5",
       title: "Tim and Dan Joo, Co-Founders",
-      logoUrl: "../../../public/image/haerfest-logo-x2.934ab63.png",
+      logoUrl: "./image/haerfest-logo-x2.934ab63.png",
       message:
         "When you want to create a business bigger than yourself, you need a lot of help. That's what Fiverr does.",
     },
@@ -53,21 +53,21 @@ const Testimonial = () => {
     {
       videoUrl: "https://www.youtube.com/embed/3ifgQF40rMI",
       title: "Caitlin Tormey, Chief Commercial Officer",
-      logoUrl: "../../../public/image/naadam-logo-x2.a79031d.png",
+      logoUrl: "./image/naadam-logo-x2.a79031d.png",
       message:
         "We've used Fiverr for Shopify web development, graphic design, and backend web development. Working with Fiverr makes my job a little easier every day.",
     },
     {
       videoUrl: "https://www.youtube.com/embed/XUwfy7d08KI?si=1_dLetR_SUbbQQHv",
       title: "Brighid Gannon (DNP, PMHNP-BC), Co-Founder",
-      logoUrl: "../../../public/image/lavender-logo-x2.3fff9e7.png",
+      logoUrl: "./image/lavender-logo-x2.3fff9e7.png",
       message:
         "We used Fiverr for SEO, our logo, website, copy, animated videos — literally everything. It was like working with a human right next to you versus being across the world.",
     },
     {
       videoUrl: "https://www.youtube.com/embed/Q2qpOeY4CZA?si=040OuLvUJgVggJsC",
       title: "Kay Kim, Co-Founder",
-      logoUrl: "../../../public/image/rooted-logo-x2.7da3bc9.png",
+      logoUrl: "./image/rooted-logo-x2.7da3bc9.png",
       message:
         "It's extremely exciting that Fiverr has freelancers from all over the world — it broadens the talent pool. One of the best things about Fiverr is that while we're sleeping, someone's working.",
     },

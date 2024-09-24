@@ -44,7 +44,7 @@ const FiverrPro = () => {
           <button>Get started</button>
         </div>
         <div className="fierrPro_content_image">
-          <img src="../../../public/image/X1.png" alt="" />
+          <img src=".image/X1.png" alt="" />
         </div>
       </div>
     </div>

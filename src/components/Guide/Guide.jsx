@@ -43,29 +43,28 @@ const Guide = () => {
   // GUIDE INFORMATION
   const guideArr = [
     {
-      imgUrl: "../../../public/image/business-fiverr.jpg",
+      imgUrl: "./image/business-fiverr.jpg",
       content: "Start a side business",
     },
     {
-      imgUrl: "../../../public/image/businesslogodesign-fiverrguide.jpg",
+      imgUrl: "./image/businesslogodesign-fiverrguide.jpg",
       content: "Ecommerce business Ideas",
     },
     {
-      imgUrl: "../../../public/image/05-ArticleCover.jpg",
+      imgUrl: "./image/05-ArticleCover.jpg",
       content: "Start an online business and work from home",
     },
     {
-      imgUrl: "../../../public/image/sidehustle.jpeg",
+      imgUrl: "./image/sidehustle.jpeg",
       content: "Build a website from scratch",
     },
     {
       imgUrl:
-        "../../../public/image/1685561103924-12profitableecommercebusinessideasyoucanstarttoday.jpg",
+        "./image/1685561103924-12profitableecommercebusinessideasyoucanstarttoday.jpg",
       content: "Grow your business with AI",
     },
     {
-      imgUrl:
-        "../../../public/image/1682363178357-Howtobuildawebsitefromscratch.jpg",
+      imgUrl: "./image/1682363178357-Howtobuildawebsitefromscratch.jpg",
       content: "Create a logo for your business",
     },
   ];

@@ -46,57 +46,57 @@ const PopularService = () => {
     {
       color: "#00732e",
       content: "Website Development",
-      src: "../../../public/image/website-development.png",
+      src: "./image/website-development.png",
     },
     {
       color: "#ff7640",
       content: "Logo Design",
-      src: "../../../public/image/logo-design.png",
+      src: "./image/logo-design.png",
     },
     {
       color: "#003912",
       content: "SEO",
-      src: "../../../public/image/seo.png",
+      src: "./image/seo.png",
     },
     {
       color: "#4d1727",
       content: "Architecture & Interior Design",
-      src: "../../../public/image/architecture-design.png",
+      src: "./image/architecture-design.png",
     },
     {
       color: "#687200",
       content: "Social Media Marketing",
-      src: "../../../public/image/social-media-marketing.png",
+      src: "./image/social-media-marketing.png",
     },
     {
       color: "#421300",
       content: "Voice Over",
-      src: "../../../public/image/voice-over.png",
+      src: "./image/voice-over.png",
     },
     {
       color: "#254200",
       content: "Software Development",
-      src: "../../../public/image/software-development.png",
+      src: "./image/software-development.png",
     },
     {
       color: "#8f2900",
       content: "Data Science & ML",
-      src: "../../../public/image/data-science.png",
+      src: "./image/data-science.png",
     },
     {
       color: "#687200",
       content: "Product Photography",
-      src: "../../../public/image/product-photography.png",
+      src: "./image/product-photography.png",
     },
     {
       color: "#00732e",
       content: "E-Commerce Marketing",
-      src: "../../../public/image/e-commerce.png",
+      src: "./image/e-commerce.png",
     },
     {
       color: "#be5272",
       content: "Video Editing",
-      src: "../../../public/image/video-editing.png",
+      src: "./image/video-editing.png",
     },
   ];
   return (
